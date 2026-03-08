@@ -15,10 +15,9 @@ function StepCard({ number, title, description, isLast, index }: StepCardProps) 
       <div className="flex md:flex-col items-start gap-4 flex-1">
         <div className="relative flex flex-col items-center">
           <span
-            className="font-bold text-[var(--text-2xl)] select-none"
+            className="font-bold text-2xl select-none text-primary"
             style={{
               fontFamily: 'var(--font-mono)',
-              color: 'var(--color-primary)',
               lineHeight: 1,
             }}
           >
@@ -26,24 +25,17 @@ function StepCard({ number, title, description, isLast, index }: StepCardProps) 
           </span>
           {!isLast && (
             <div
-              className="block md:hidden mt-4 w-px flex-1 min-h-[32px]"
-              style={{ backgroundColor: 'var(--color-border)' }}
+              className="block md:hidden mt-4 w-px flex-1 min-h-[32px] bg-border"
               aria-hidden="true"
             />
           )}
         </div>
 
         <div className="flex flex-col gap-2 pb-8 md:pb-0">
-          <h3
-            className="text-[var(--color-text)] font-semibold text-[var(--text-xl)]"
-            style={{ lineHeight: 'var(--leading-snug)' }}
-          >
+          <h3 className="text-text font-semibold text-xl leading-snug">
             {title}
           </h3>
-          <p
-            className="text-[var(--color-text-muted)] text-[var(--text-base)]"
-            style={{ lineHeight: 'var(--leading-relaxed)' }}
-          >
+          <p className="text-text-muted text-base leading-relaxed">
             {description}
           </p>
         </div>
@@ -51,9 +43,8 @@ function StepCard({ number, title, description, isLast, index }: StepCardProps) 
 
       {!isLast && (
         <div
-          className="hidden md:block absolute top-3 w-full h-px"
+          className="hidden md:block absolute top-3 w-full h-px bg-border"
           style={{
-            backgroundColor: 'var(--color-border)',
             left: '50%',
             width: '100%',
           }}
@@ -68,8 +59,8 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
+      className="bg-bg-alt"
       style={{
-        backgroundColor: 'var(--color-bg-alt)',
         paddingBlock: 'var(--spacing-section)',
       }}
     >
@@ -105,9 +96,8 @@ export default function HowItWorks() {
 
         <FadeIn delay={4} className="mt-10 text-center">
           <p
-            className="inline-block text-[var(--color-text-muted)] text-[var(--text-sm)] px-4 py-2 rounded-[var(--radius-full)]"
+            className="inline-block text-text-muted text-sm px-4 py-2 rounded-full border border-border"
             style={{
-              border: '1px solid var(--color-border)',
               fontFamily: 'var(--font-mono)',
             }}
           >

@@ -25,24 +25,19 @@ function AccordionItem({ question, answer, isOpen, onToggle, index }: AccordionI
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={id}
-        className="w-full flex items-center justify-between gap-4 py-5 text-left"
+        className="w-full flex items-center justify-between gap-4 py-5 text-left text-text"
         style={{
-          color: 'var(--color-text)',
           background: 'none',
           border: 'none',
           cursor: 'pointer',
           minHeight: '44px',
         }}
       >
-        <span
-          className="font-medium text-[var(--text-md)]"
-          style={{ lineHeight: 'var(--leading-snug)' }}
-        >
+        <span className="font-medium text-md leading-snug">
           {question}
         </span>
         <span
-          className="flex-shrink-0 transition-transform duration-200"
-          style={{ color: 'var(--color-accent)' }}
+          className="flex-shrink-0 transition-transform duration-200 text-accent"
           aria-hidden="true"
         >
           {isOpen ? <IconMinus size={20} /> : <IconPlus size={20} />}
@@ -60,11 +55,7 @@ function AccordionItem({ question, answer, isOpen, onToggle, index }: AccordionI
         }}
       >
         <p
-          className="text-[var(--text-base)] pb-5"
-          style={{
-            color: 'var(--color-text-muted)',
-            lineHeight: 'var(--leading-relaxed)',
-          }}
+          className="text-base text-text-muted leading-relaxed pb-5"
         >
           {answer}
         </p>
@@ -121,8 +112,8 @@ export default function FAQ() {
   return (
     <section
       id="faq"
+      className="bg-bg-alt"
       style={{
-        backgroundColor: 'var(--color-bg-alt)',
         paddingBlock: 'var(--spacing-section)',
       }}
     >

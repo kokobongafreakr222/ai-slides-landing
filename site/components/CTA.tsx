@@ -11,19 +11,12 @@ export default function CTA() {
             style={{ maxWidth: '640px', paddingBlock: '40px' }}
           >
             <h2
-              className="text-[var(--color-text)] font-bold text-[var(--text-3xl)]"
-              style={{
-                lineHeight: 'var(--leading-snug)',
-                letterSpacing: 'var(--tracking-tight)',
-              }}
+              className="text-text font-bold text-3xl leading-snug tracking-tight"
             >
               Следующая презентация — без PowerPoint и без дизайнера.
             </h2>
 
-            <p
-              className="text-[var(--color-text-muted)] text-[var(--text-md)]"
-              style={{ lineHeight: 'var(--leading-relaxed)' }}
-            >
+            <p className="text-text-muted text-md leading-relaxed">
               Попробуйте на реальной задаче. Первая — бесплатно.
             </p>
 
@@ -31,10 +24,7 @@ export default function CTA() {
               <Button variant="primary" size="lg" fullWidth href="#hero" className="w-full md:w-auto">
                 Создать презентацию
               </Button>
-              <p
-                className="text-[var(--text-sm)]"
-                style={{ color: 'var(--color-text-subtle)' }}
-              >
+              <p className="text-sm text-text-subtle">
                 Без регистрации. Результат виден сразу.
               </p>
             </div>

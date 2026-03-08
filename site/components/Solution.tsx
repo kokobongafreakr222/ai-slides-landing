@@ -42,11 +42,7 @@ export default function Solution() {
 
             <div className="mt-8">
               <p
-                className="text-[var(--text-xs)] uppercase font-medium mb-3"
-                style={{
-                  color: 'var(--color-text-subtle)',
-                  letterSpacing: 'var(--tracking-wider)',
-                }}
+                className="text-xs uppercase font-medium mb-3 text-text-subtle tracking-wider"
               >
                 Доступные стили
               </p>
@@ -60,15 +56,12 @@ export default function Solution() {
 
           <FadeIn delay={1}>
             <div
-              className="rounded-[var(--radius-lg)] overflow-hidden"
+              className="rounded-lg overflow-hidden"
               style={{ border: '1px solid var(--color-border)' }}
             >
               <div
-                className="grid grid-cols-[1fr_2fr] text-[var(--text-xs)] uppercase font-medium px-4 py-3"
+                className="grid grid-cols-[1fr_2fr] text-xs uppercase font-medium px-4 py-3 bg-bg-card text-text-subtle tracking-wide"
                 style={{
-                  backgroundColor: 'var(--color-bg-card)',
-                  color: 'var(--color-text-subtle)',
-                  letterSpacing: 'var(--tracking-wide)',
                   borderBottom: '1px solid var(--color-border)',
                 }}
               >
@@ -86,23 +79,20 @@ export default function Solution() {
                   }}
                 >
                   <div className="flex items-center gap-2">
-                    <span
-                      className={row.isUs ? 'text-[var(--color-success)]' : 'text-[var(--color-text-subtle)]'}
-                    >
+                    <span className={row.isUs ? 'text-success' : 'text-text-subtle'}>
                       {row.isUs ? <IconCheck size={14} /> : <IconX size={14} />}
                     </span>
                     <span
-                      className="font-semibold text-[var(--text-sm)]"
+                      className="font-semibold text-sm"
                       style={{ color: row.isUs ? 'var(--color-text)' : 'var(--color-text-muted)' }}
                     >
                       {row.tool}
                     </span>
                   </div>
                   <span
-                    className="text-[var(--text-sm)]"
+                    className="text-sm leading-relaxed"
                     style={{
                       color: row.isUs ? 'var(--color-text)' : 'var(--color-text-muted)',
-                      lineHeight: 'var(--leading-relaxed)',
                     }}
                   >
                     {row.description}

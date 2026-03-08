@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button';
 export default function Header() {
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-[var(--z-header)] border-b border-[var(--color-border)]"
+      className="fixed top-0 left-0 right-0 z-[var(--z-header)] border-b border-border"
       style={{
         backgroundColor: 'rgba(10, 10, 15, 0.85)',
         backdropFilter: 'blur(12px)',
@@ -19,10 +19,9 @@ export default function Header() {
         >
           <a
             href="/"
-            className="text-[var(--color-text)] font-bold text-[var(--text-lg)] tracking-tight no-underline"
+            className="text-text font-bold text-lg tracking-tight no-underline"
             style={{
               fontFamily: 'var(--font-heading)',
-              letterSpacing: 'var(--tracking-tight)',
             }}
           >
             DeckMind
@@ -34,19 +33,19 @@ export default function Header() {
           >
             <a
               href="#how-it-works"
-              className="min-h-[44px] flex items-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] text-[var(--text-sm)] transition-colors duration-[var(--transition-base)] no-underline"
+              className="min-h-[44px] flex items-center text-text-muted hover:text-text text-sm transition-colors duration-[var(--transition-base)] no-underline"
             >
               Как работает
             </a>
             <a
               href="#cases"
-              className="min-h-[44px] flex items-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] text-[var(--text-sm)] transition-colors duration-[var(--transition-base)] no-underline"
+              className="min-h-[44px] flex items-center text-text-muted hover:text-text text-sm transition-colors duration-[var(--transition-base)] no-underline"
             >
               Кейсы
             </a>
             <a
               href="#faq"
-              className="min-h-[44px] flex items-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] text-[var(--text-sm)] transition-colors duration-[var(--transition-base)] no-underline"
+              className="min-h-[44px] flex items-center text-text-muted hover:text-text text-sm transition-colors duration-[var(--transition-base)] no-underline"
             >
               Вопросы
             </a>

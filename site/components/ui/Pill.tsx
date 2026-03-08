@@ -4,19 +4,18 @@ interface PillProps {
 }
 
 const variantStyles: Record<NonNullable<PillProps['variant']>, string> = {
-  default: 'bg-[var(--color-bg-card)] text-[var(--color-text-muted)] border border-[var(--color-border)]',
-  accent: 'bg-[var(--color-accent-muted)] text-[var(--color-accent)]',
-  muted: 'bg-[var(--color-primary-muted)] text-[var(--color-primary)]',
+  default: 'bg-bg-card text-text-muted border border-border',
+  accent: 'bg-accent-muted text-accent',
+  muted: 'bg-primary-muted text-primary',
 };
 
 export default function Pill({ label, variant = 'default' }: PillProps) {
   return (
     <span
       className={[
-        'inline-flex items-center px-3 py-1.5 rounded-[var(--radius-full)] text-[var(--text-xs)] font-medium uppercase',
+        'inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium uppercase tracking-wide',
         variantStyles[variant],
       ].join(' ')}
-      style={{ letterSpacing: 'var(--tracking-wide)' }}
     >
       {label}
     </span>

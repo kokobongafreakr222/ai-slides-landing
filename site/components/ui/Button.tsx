@@ -14,19 +14,19 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonProps['variant'], string> = {
   primary:
-    'bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]',
+    'bg-primary text-white hover:bg-primary-hover',
   secondary:
-    'bg-[var(--color-bg-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-alt)]',
+    'bg-bg-card text-text hover:bg-bg-alt',
   ghost:
-    'bg-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)]',
+    'bg-transparent text-text-muted hover:text-text',
   outline:
-    'bg-transparent border border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-primary)]',
+    'bg-transparent border border-border text-text hover:border-primary',
 };
 
 const sizeStyles: Record<ButtonProps['size'], string> = {
-  sm: 'px-4 py-2 text-[var(--text-sm)]',
-  md: 'px-6 py-3 text-[var(--text-base)]',
-  lg: 'px-8 py-4 text-[var(--text-md)]',
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-md',
 };
 
 export default function Button({
@@ -41,7 +41,7 @@ export default function Button({
   className = '',
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center rounded-[var(--radius-md)] font-medium transition-[background-color,color,border-color,transform] duration-[var(--transition-base)] cursor-pointer select-none focus-visible:outline-2 focus-visible:outline-[var(--color-accent)] focus-visible:outline-offset-2 min-h-[44px]';
+    'inline-flex items-center justify-center rounded-md font-medium transition-[background-color,color,border-color,transform] duration-[var(--transition-base)] cursor-pointer select-none focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 min-h-[44px]';
 
   const combinedStyles = [
     baseStyles,

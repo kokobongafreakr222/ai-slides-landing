@@ -3,9 +3,8 @@ import Button from '@/components/ui/Button';
 function SlidesMockup() {
   return (
     <div
-      className="w-full aspect-video rounded-[var(--radius-lg)] overflow-hidden relative"
+      className="w-full aspect-video rounded-lg overflow-hidden relative bg-bg-card"
       style={{
-        background: 'var(--color-bg-card)',
         border: '1px solid var(--color-border)',
         boxShadow: 'var(--shadow-lg)',
       }}
@@ -16,13 +15,12 @@ function SlidesMockup() {
           className="flex items-center gap-2 px-4 py-3"
           style={{ borderBottom: '1px solid var(--color-border)' }}
         >
-          <div className="w-2 h-2 rounded-full bg-[var(--color-error)]" />
-          <div className="w-2 h-2 rounded-full bg-[var(--color-warning)]" />
-          <div className="w-2 h-2 rounded-full bg-[var(--color-success)]" />
+          <div className="w-2 h-2 rounded-full bg-error" />
+          <div className="w-2 h-2 rounded-full bg-warning" />
+          <div className="w-2 h-2 rounded-full bg-success" />
           <div
-            className="ml-auto text-[10px]"
+            className="ml-auto text-[10px] text-text-subtle"
             style={{
-              color: 'var(--color-text-subtle)',
               fontFamily: 'var(--font-mono)',
             }}
           >
@@ -49,26 +47,25 @@ function SlidesMockup() {
 
           <div className="flex-1 flex flex-col items-center justify-center p-6 gap-4">
             <div
-              className="w-full h-2 rounded-full"
-              style={{ background: 'var(--color-primary)', maxWidth: '60%' }}
+              className="w-full h-2 rounded-full bg-primary"
+              style={{ maxWidth: '60%' }}
             />
             <div
-              className="w-full h-1.5 rounded-full"
-              style={{ background: 'var(--color-border)', maxWidth: '80%' }}
+              className="w-full h-1.5 rounded-full bg-border"
+              style={{ maxWidth: '80%' }}
             />
             <div
-              className="w-full h-1.5 rounded-full"
-              style={{ background: 'var(--color-border)', maxWidth: '70%' }}
+              className="w-full h-1.5 rounded-full bg-border"
+              style={{ maxWidth: '70%' }}
             />
             <div className="flex gap-3 mt-2">
               {[1, 2, 3].map((n) => (
                 <div
                   key={n}
-                  className="rounded-[var(--radius-sm)]"
+                  className="rounded-sm bg-primary-muted"
                   style={{
                     width: 48,
                     height: 32,
-                    background: 'var(--color-primary-muted)',
                     border: '1px solid rgba(91, 106, 240, 0.3)',
                   }}
                 />
@@ -94,17 +91,14 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col gap-6">
             <p
-              className="text-[var(--color-accent)] uppercase font-medium text-[var(--text-xs)]"
-              style={{ letterSpacing: 'var(--tracking-wider)' }}
+              className="text-accent uppercase font-medium text-xs tracking-wider"
             >
               Питч инвестору. Отчёт директорам. Обучающий курс.
             </p>
 
             <h1
-              className="text-[var(--color-text)] font-bold text-[var(--text-5xl)]"
+              className="text-text font-bold text-5xl leading-tight tracking-tight"
               style={{
-                lineHeight: 'var(--leading-tight)',
-                letterSpacing: 'var(--tracking-tight)',
                 fontFamily: 'var(--font-heading)',
               }}
             >
@@ -112,8 +106,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className="text-[var(--color-text-muted)] text-[var(--text-md)] max-w-lg"
-              style={{ lineHeight: 'var(--leading-relaxed)' }}
+              className="text-text-muted text-md leading-relaxed max-w-lg"
             >
               Описываете задачу — система строит структуру, подбирает стиль, компонует слайды. Вы правите детали, а не начинаете с белого листа.
             </p>
@@ -122,10 +115,7 @@ export default function Hero() {
               <Button variant="primary" size="lg" fullWidth={false} href="#cta" className="md:w-auto w-full">
                 Создать презентацию
               </Button>
-              <p
-                className="text-[var(--text-sm)]"
-                style={{ color: 'var(--color-text-subtle)' }}
-              >
+              <p className="text-sm text-text-subtle">
                 Первая — бесплатно. Без регистрации.
               </p>
             </div>

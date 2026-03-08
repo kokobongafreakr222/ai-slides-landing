@@ -15,17 +15,11 @@ function ProblemCard({ icon, title, description, index }: ProblemCardProps) {
     <FadeIn delay={index}>
       <Card variant="default" padding="lg" className="h-full">
         <div className="flex flex-col gap-4">
-          <div className="text-[var(--color-accent)] w-6 h-6">{icon}</div>
-          <h3
-            className="text-[var(--color-text)] font-semibold text-[var(--text-xl)]"
-            style={{ lineHeight: 'var(--leading-snug)' }}
-          >
+          <div className="text-accent w-6 h-6">{icon}</div>
+          <h3 className="text-text font-semibold text-xl leading-snug">
             {title}
           </h3>
-          <p
-            className="text-[var(--color-text-muted)] text-[var(--text-base)]"
-            style={{ lineHeight: 'var(--leading-relaxed)' }}
-          >
+          <p className="text-text-muted text-base leading-relaxed">
             {description}
           </p>
         </div>
@@ -38,8 +32,8 @@ export default function Problem() {
   return (
     <section
       id="problem"
+      className="bg-bg-alt"
       style={{
-        backgroundColor: 'var(--color-bg-alt)',
         paddingBlock: 'var(--spacing-section)',
       }}
     >
@@ -76,21 +70,15 @@ export default function Problem() {
           <Card variant="bordered" padding="lg">
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
               <div className="flex-shrink-0">
-                <div className="text-[var(--color-accent)] w-6 h-6">
+                <div className="text-accent w-6 h-6">
                   <IconUsers size={24} />
                 </div>
               </div>
               <div>
-                <h3
-                  className="text-[var(--color-text)] font-semibold text-[var(--text-xl)] mb-2"
-                  style={{ lineHeight: 'var(--leading-snug)' }}
-                >
+                <h3 className="text-text font-semibold text-xl leading-snug mb-2">
                   Для агентств — отдельная история.
                 </h3>
-                <p
-                  className="text-[var(--color-text-muted)] text-[var(--text-base)]"
-                  style={{ lineHeight: 'var(--leading-relaxed)' }}
-                >
+                <p className="text-text-muted text-base leading-relaxed">
                   Каждый клиент требует свой стиль. Дизайнер — узкое горлышко всего процесса. Итерации в последний момент съедают маржу. Взять больше заказов без расширения штата — задача без решения. До этого.
                 </p>
               </div>

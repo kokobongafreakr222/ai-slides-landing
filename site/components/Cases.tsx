@@ -20,9 +20,8 @@ function CaseMockup({ tag }: { tag: string }) {
 
   return (
     <div
-      className="w-full aspect-video rounded-[var(--radius-md)] overflow-hidden relative"
+      className="w-full aspect-video rounded-md overflow-hidden relative bg-bg"
       style={{
-        background: 'var(--color-bg)',
         border: '1px solid var(--color-border)',
       }}
       aria-hidden="true"
@@ -33,12 +32,12 @@ function CaseMockup({ tag }: { tag: string }) {
           style={{ height: 8, width: '55%', backgroundColor: color, opacity: 0.9 }}
         />
         <div
-          className="rounded-sm"
-          style={{ height: 5, width: '75%', backgroundColor: 'var(--color-border)' }}
+          className="rounded-sm bg-border"
+          style={{ height: 5, width: '75%' }}
         />
         <div
-          className="rounded-sm"
-          style={{ height: 5, width: '65%', backgroundColor: 'var(--color-border)' }}
+          className="rounded-sm bg-border"
+          style={{ height: 5, width: '65%' }}
         />
         <div className="flex gap-2 mt-auto">
           {[1, 2, 3].map((n) => (
@@ -62,25 +61,18 @@ function CaseCard({ tag, title, description, index }: CaseCardProps) {
   return (
     <FadeIn delay={index}>
       <article
-        className="flex flex-col gap-4 p-6 rounded-[var(--radius-lg)] h-full transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]"
+        className="flex flex-col gap-4 p-6 rounded-lg h-full transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] bg-bg-card"
         style={{
-          backgroundColor: 'var(--color-bg-card)',
           border: '1px solid var(--color-border)',
         }}
       >
         <CaseMockup tag={tag} />
         <div className="flex flex-col gap-3">
           <Pill label={tag} variant="accent" />
-          <h3
-            className="text-[var(--color-text)] font-semibold text-[var(--text-xl)]"
-            style={{ lineHeight: 'var(--leading-snug)' }}
-          >
+          <h3 className="text-text font-semibold text-xl leading-snug">
             {title}
           </h3>
-          <p
-            className="text-[var(--color-text-muted)] text-[var(--text-base)]"
-            style={{ lineHeight: 'var(--leading-relaxed)' }}
-          >
+          <p className="text-text-muted text-base leading-relaxed">
             {description}
           </p>
         </div>

@@ -1,17 +1,16 @@
 export default function Footer() {
   return (
     <footer
+      className="border-t border-border"
       style={{
-        borderTop: '1px solid var(--color-border)',
         paddingBlock: '32px',
       }}
     >
       <div className="container">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <span
-            className="font-bold text-[var(--text-md)]"
+            className="font-bold text-md text-text-muted"
             style={{
-              color: 'var(--color-text-muted)',
               fontFamily: 'var(--font-heading)',
             }}
           >
@@ -24,31 +23,25 @@ export default function Footer() {
           >
             <a
               href="#"
-              className="min-h-[44px] inline-flex items-center text-[var(--text-sm)] no-underline hover:text-[var(--color-text)] transition-colors"
-              style={{ color: 'var(--color-text-muted)' }}
+              className="min-h-[44px] inline-flex items-center text-sm text-text-muted no-underline hover:text-text transition-colors"
             >
               Политика конфиденциальности
             </a>
             <a
               href="#"
-              className="min-h-[44px] inline-flex items-center text-[var(--text-sm)] no-underline hover:text-[var(--color-text)] transition-colors"
-              style={{ color: 'var(--color-text-muted)' }}
+              className="min-h-[44px] inline-flex items-center text-sm text-text-muted no-underline hover:text-text transition-colors"
             >
               Условия использования
             </a>
             <a
               href="mailto:hello@deckmind.io"
-              className="min-h-[44px] inline-flex items-center text-[var(--text-sm)] no-underline hover:text-[var(--color-text)] transition-colors"
-              style={{ color: 'var(--color-text-muted)' }}
+              className="min-h-[44px] inline-flex items-center text-sm text-text-muted no-underline hover:text-text transition-colors"
             >
               hello@deckmind.io
             </a>
           </nav>
 
-          <p
-            className="text-[var(--text-sm)]"
-            style={{ color: 'var(--color-text-subtle)' }}
-          >
+          <p className="text-sm text-text-subtle">
             © 2026 DeckMind
           </p>
         </div>
