@@ -9,8 +9,8 @@ interface CardProps {
 }
 
 const variantStyles: Record<NonNullable<CardProps['variant']>, string> = {
-  default: 'bg-bg-card',
-  elevated: 'bg-bg-card shadow-md',
+  default: 'bg-bg-card border border-border',
+  elevated: 'bg-bg-card border border-border shadow-md',
   bordered: 'bg-transparent border border-border',
 };
 

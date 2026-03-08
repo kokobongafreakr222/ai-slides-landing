@@ -82,7 +82,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="pt-[var(--header-height-mobile)] md:pt-[var(--header-height-desktop)]"
+      className="pt-[var(--header-height-mobile)] md:pt-[var(--header-height-desktop)] section-glow"
     >
       <div
         className="container"

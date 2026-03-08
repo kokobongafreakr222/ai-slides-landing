@@ -9,18 +9,18 @@
   --breakpoint-xl: 1440px;
 
   /* Colors */
-  --color-bg: #0a0a0f;
-  --color-bg-alt: #111118;
-  --color-bg-card: #16161e;
-  --color-border: #1e1e2a;
+  --color-bg: #09090e;
+  --color-bg-alt: #0e0e16;
+  --color-bg-card: #13131c;
+  --color-border: #252535;
   --color-primary: #4f5bd5;
   --color-primary-hover: #4350c4;
-  --color-primary-muted: rgba(91, 106, 240, 0.12);
+  --color-primary-muted: rgba(91, 106, 240, 0.1);
   --color-accent: #7c8cf8;
-  --color-accent-muted: rgba(124, 140, 248, 0.15);
-  --color-text: #e8e8f0;
-  --color-text-muted: #7a7a8c;
-  --color-text-subtle: #6a6a80;
+  --color-accent-muted: rgba(124, 140, 248, 0.12);
+  --color-text: #eaeaf2;
+  --color-text-muted: #8585a0;
+  --color-text-subtle: #6a6a82;
   --color-success: #3ecf8e;
   --color-warning: #f5a623;
   --color-error: #e54d4d;
@@ -88,9 +88,9 @@
   --header-height-desktop: 64px;
 
   /* Spacing (layout-level, not TW utilities) */
-  --spacing-section: clamp(64px, 5vw + 32px, 120px);
-  --spacing-block: clamp(32px, 3vw + 16px, 64px);
-  --spacing-element: clamp(16px, 1.5vw + 8px, 24px);
+  --spacing-section: clamp(48px, 3vw + 20px, 80px);
+  --spacing-block: clamp(24px, 2vw + 12px, 48px);
+  --spacing-element: clamp(12px, 1vw + 6px, 20px);
 
   /* Z-index scale */
   --z-base: 0;
@@ -121,6 +121,32 @@ body {
   line-height: var(--leading-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section gradient backgrounds */
+.section-glow {
+  position: relative;
+}
+
+.section-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(79, 91, 213, 0.06), transparent);
+  pointer-events: none;
+}
+
+.cta-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(79, 91, 213, 0.08), transparent);
+  pointer-events: none;
 }
 
 /* Skip to content */

@@ -32,7 +32,7 @@ export default function Problem() {
   return (
     <section
       id="problem"
-      className="bg-bg-alt"
+      className="bg-bg-alt section-glow"
       style={{
         paddingBlock: 'var(--spacing-section)',
       }}

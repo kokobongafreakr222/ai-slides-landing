@@ -112,7 +112,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="bg-bg-alt"
+      className="bg-bg-alt section-glow"
       style={{
         paddingBlock: 'var(--spacing-section)',
       }}

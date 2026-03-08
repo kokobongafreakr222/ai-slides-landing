@@ -20,34 +20,35 @@ function CaseMockup({ tag }: { tag: string }) {
 
   return (
     <div
-      className="w-full aspect-video rounded-md overflow-hidden relative bg-bg"
+      className="w-full rounded-md overflow-hidden relative bg-bg"
       style={{
         border: '1px solid var(--color-border)',
+        height: '100px',
       }}
       aria-hidden="true"
     >
-      <div className="absolute inset-0 flex flex-col gap-3 p-4">
+      <div className="absolute inset-0 flex flex-col gap-2 p-3">
         <div
           className="rounded-sm"
-          style={{ height: 8, width: '55%', backgroundColor: color, opacity: 0.9 }}
+          style={{ height: 6, width: '45%', backgroundColor: color, opacity: 0.9 }}
         />
         <div
           className="rounded-sm bg-border"
-          style={{ height: 5, width: '75%' }}
+          style={{ height: 4, width: '65%' }}
         />
         <div
           className="rounded-sm bg-border"
-          style={{ height: 5, width: '65%' }}
+          style={{ height: 4, width: '55%' }}
         />
-        <div className="flex gap-2 mt-auto">
+        <div className="flex gap-1.5 mt-auto">
           {[1, 2, 3].map((n) => (
             <div
               key={n}
               className="flex-1 rounded-sm"
               style={{
-                height: 24,
-                backgroundColor: `${color}20`,
-                border: `1px solid ${color}40`,
+                height: 16,
+                backgroundColor: `${color}15`,
+                border: `1px solid ${color}30`,
               }}
             />
           ))}
