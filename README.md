@@ -17,7 +17,6 @@ AI-ассистент, который создаёт презентации из
 ## Быстрый старт
 
 ```bash
-cd site
 npm install
 npm run dev
 ```
@@ -34,47 +33,17 @@ npm run build
 
 ## Стек
 
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - React 19
 - Tailwind CSS 4
 - TypeScript (strict)
-- Шрифты: Inter, JetBrains Mono
-
----
-
-## Документация
-
-| Файл | Описание |
-|------|----------|
-| STRATEGY_BRIEF.md | ЦА, боли, УТП, возражения |
-| COPY_FRAMEWORK.md | Голос бренда, запрещённые слова |
-| SITE_ARCHITECTURE.md | Дизайн-токены, компоненты |
-| SITE_COPY.md | Все тексты |
-| SECURITY_AUDIT.md | Security-аудит |
-| PERF_AUDIT.md | React/Next.js оптимизация |
-| QA_REPORT.md | E2E тестирование |
-| FINAL_AUDIT.md | Сводная таблица |
-
----
-
-## Деплой
-
-### Vercel
-```bash
-npx vercel
-```
-
-### Railway
-```bash
-railway up
-```
+- Шрифты: Cinzel (headings), Cormorant Garamond (body), JetBrains Mono (mono)
 
 ---
 
 ## Структура
 
 ```
-site/
 ├── app/
 │   ├── layout.tsx
 │   ├── page.tsx
@@ -95,6 +64,10 @@ site/
 
 ---
 
-## Создано
+## Редизайн (Март 2026)
 
-Agent Swarm: UNIVERSAL_SITE_SWARM v2.0
+Полный редизайн в premium стиле:
+- **Типографика:** Cinzel + Cormorant Garamond
+- **Цвета:** Тёмная тема с золотым акцентом (#d4af37)
+- **Анимации:** Micro-animations, hover effects, gold glow
+- **Иконки:** Только SVG, без эмодзи
