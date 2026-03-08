@@ -1,3 +1,5 @@
+'use client';
+
 import Button from '@/components/ui/Button';
 import FadeIn from '@/components/ui/FadeIn';
 
@@ -7,7 +9,7 @@ function SlidesMockup() {
       className="w-full aspect-video rounded-xl overflow-hidden relative bg-bg-card group"
       style={{
         border: '1px solid var(--color-border)',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(79, 91, 213, 0.15)',
+        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.08)',
         transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
       }}
       aria-hidden="true"
@@ -40,8 +42,8 @@ function SlidesMockup() {
                 key={i}
                 className="rounded aspect-video transition-all duration-300 hover:scale-105"
                 style={{
-                  background: `rgba(91, 106, 240, ${opacity * 0.15})`,
-                  border: i === 0 ? '1px solid var(--color-primary)' : '1px solid var(--color-border)',
+                  background: `rgba(212, 175, 55, ${opacity * 0.12})`,
+                  border: i === 0 ? '1px solid var(--color-gold)' : '1px solid var(--color-border)',
                   animationDelay: `${i * 100}ms`,
                 }}
               />
@@ -65,11 +67,11 @@ function SlidesMockup() {
               {[1, 2, 3].map((n) => (
                 <div
                   key={n}
-                  className="rounded-sm bg-primary-muted transition-all duration-300 hover:scale-110 hover:bg-primary/20"
+                  className="rounded-sm bg-gold-muted transition-all duration-300 hover:scale-110 hover:bg-gold/15"
                   style={{
                     width: 48,
                     height: 32,
-                    border: '1px solid rgba(91, 106, 240, 0.3)',
+                    border: '1px solid rgba(212, 175, 55, 0.25)',
                   }}
                 />
               ))}
@@ -82,7 +84,7 @@ function SlidesMockup() {
       <div 
         className="absolute -inset-px rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
-          background: 'linear-gradient(135deg, rgba(79, 91, 213, 0.2) 0%, transparent 50%, rgba(124, 140, 248, 0.1) 100%)',
+          background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, transparent 50%, rgba(229, 193, 88, 0.08) 100%)',
         }}
       />
     </div>
@@ -99,7 +101,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79, 91, 213, 0.12), transparent)',
+          background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212, 175, 55, 0.06), transparent)',
         }}
       />
       
@@ -111,7 +113,8 @@ export default function Hero() {
           <div className="flex flex-col gap-6">
             <FadeIn direction="up" delay={0}>
               <p
-                className="text-accent uppercase font-semibold text-xs tracking-widest"
+                className="text-gold uppercase font-medium text-xs tracking-[0.15em]"
+                style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Питч инвестору · Отчёт директорам · Обучающий курс
               </p>
@@ -119,20 +122,21 @@ export default function Hero() {
 
             <FadeIn direction="up" delay={1}>
               <h1
-                className="text-text font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight"
+                className="text-text font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight"
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  letterSpacing: '-0.02em',
+                  letterSpacing: '0.02em',
                 }}
               >
                 У вас есть задача.
-                <span className="block text-accent">У нас есть слайды.</span>
+                <span className="block text-gold mt-2">У нас есть слайды.</span>
               </h1>
             </FadeIn>
 
             <FadeIn direction="up" delay={2}>
               <p
                 className="text-text-muted text-lg leading-relaxed max-w-lg"
+                style={{ fontFamily: 'var(--font-body)' }}
               >
                 Описываете задачу — система строит структуру, подбирает стиль, компонует слайды. Вы правите детали, а не начинаете с белого листа.
               </p>
@@ -143,7 +147,7 @@ export default function Hero() {
                 <Button variant="primary" size="lg" fullWidth={false} href="#cta" className="sm:w-auto w-full">
                   Создать презентацию
                 </Button>
-                <span className="text-sm text-text-subtle">
+                <span className="text-sm text-text-subtle" style={{ fontFamily: 'var(--font-body)' }}>
                   Первая — бесплатно. Без регистрации.
                 </span>
               </div>
@@ -156,14 +160,14 @@ export default function Hero() {
               
               {/* Floating badge */}
               <div 
-                className="absolute -bottom-4 -right-4 bg-bg-card border border-border rounded-lg px-4 py-2 shadow-lg"
+                className="absolute -bottom-4 -right-4 bg-bg-card border border-gold/30 rounded-lg px-4 py-2 shadow-lg"
                 style={{
                   animation: 'float 3s ease-in-out infinite',
                 }}
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-success animate-pulse" />
-                  <span className="text-xs text-text-muted">AI генерация</span>
+                  <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                  <span className="text-xs text-text-muted" style={{ fontFamily: 'var(--font-body)' }}>AI генерация</span>
                 </div>
               </div>
             </div>

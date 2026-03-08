@@ -9,9 +9,9 @@ interface CardProps {
 }
 
 const variantStyles: Record<NonNullable<CardProps['variant']>, string> = {
-  default: 'bg-bg-card border border-border',
-  elevated: 'bg-bg-card border border-border shadow-md',
-  bordered: 'bg-transparent border border-border',
+  default: 'bg-bg-card border border-border transition-all duration-400',
+  elevated: 'bg-bg-card border border-border shadow-md transition-all duration-400',
+  bordered: 'bg-transparent border border-border transition-all duration-400',
 };
 
 const paddingStyles: Record<NonNullable<CardProps['padding']>, string> = {
@@ -32,7 +32,7 @@ export default function Card({
     variantStyles[variant],
     paddingStyles[padding],
     hoverable
-      ? 'transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg'
+      ? 'card-hover'
       : '',
     className,
   ]

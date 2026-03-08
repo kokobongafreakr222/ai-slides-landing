@@ -17,11 +17,11 @@ function ProblemCard({ icon, title, description, index, stat }: ProblemCardProps
       <Card 
         variant="default" 
         padding="lg" 
-        className="h-full group cursor-default transition-all duration-500 hover:border-primary/30"
+        className="h-full group cursor-default transition-all duration-500 hover:border-gold/30"
       >
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <div className="text-accent w-8 h-8 transition-transform duration-300 group-hover:scale-110">
+            <div className="text-gold w-8 h-8 transition-transform duration-300 group-hover:scale-110">
               {icon}
             </div>
             {stat && (
@@ -31,11 +31,15 @@ function ProblemCard({ icon, title, description, index, stat }: ProblemCardProps
             )}
           </div>
           
-          <h3 className="text-text font-semibold text-xl leading-snug transition-colors duration-300 group-hover:text-accent">
+          <h3 className="text-text font-semibold text-xl leading-snug transition-colors duration-300 group-hover:text-gold"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
             {title}
           </h3>
           
-          <p className="text-text-muted text-base leading-relaxed">
+          <p className="text-text-muted text-base leading-relaxed"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
             {description}
           </p>
         </div>
@@ -90,24 +94,26 @@ export default function Problem() {
           <Card 
             variant="bordered" 
             padding="lg"
-            className="group transition-all duration-500 hover:border-accent/30"
+            className="group transition-all duration-500 hover:border-gold/30"
           >
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
               <div className="flex-shrink-0">
-                <div className="text-accent w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+                <div className="text-gold w-10 h-10 transition-transform duration-300 group-hover:scale-110">
                   <IconUsers size={28} />
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-text font-semibold text-xl leading-snug mb-3 transition-colors duration-300 group-hover:text-accent"
+                <h3 className="text-text font-semibold text-xl leading-snug mb-3 transition-colors duration-300 group-hover:text-gold"
+                  style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   Для агентств — отдельная история
                 </h3>
                 <p className="text-text-muted text-base leading-relaxed"
+                  style={{ fontFamily: 'var(--font-body)' }}
                 >
                   Каждый клиент требует свой стиль. Дизайнер — узкое горлышко всего процесса. 
                   Итерации в последний момент съедают маржу. Взять больше заказов без расширения штата — 
-                  задача без решения. <span className="text-accent">До этого.</span>
+                  задача без решения. <span className="text-gold">До этого.</span>
                 </p>
               </div>
             </div>

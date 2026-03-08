@@ -15,10 +15,11 @@ function StepCard({ number, title, description, isLast, index }: StepCardProps) 
       <div className="flex md:flex-col items-start gap-4 flex-1">
         <div className="relative flex flex-col items-center">
           <span
-            className="font-bold text-2xl select-none text-primary"
+            className="font-semibold text-3xl select-none text-gold"
             style={{
-              fontFamily: 'var(--font-mono)',
+              fontFamily: 'var(--font-heading)',
               lineHeight: 1,
+              letterSpacing: '0.05em',
             }}
           >
             {number}
@@ -32,10 +33,14 @@ function StepCard({ number, title, description, isLast, index }: StepCardProps) 
         </div>
 
         <div className="flex flex-col gap-2 pb-8 md:pb-0">
-          <h3 className="text-text font-semibold text-xl leading-snug">
+          <h3 className="text-text font-semibold text-xl leading-snug"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
             {title}
           </h3>
-          <p className="text-text-muted text-base leading-relaxed">
+          <p className="text-text-muted text-base leading-relaxed"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
             {description}
           </p>
         </div>
@@ -43,10 +48,11 @@ function StepCard({ number, title, description, isLast, index }: StepCardProps) 
 
       {!isLast && (
         <div
-          className="hidden md:block absolute top-3 w-full h-px bg-border"
+          className="hidden md:block absolute top-4 w-full h-px"
           style={{
             left: '50%',
             width: '100%',
+            background: 'linear-gradient(90deg, var(--color-gold-muted), transparent)',
           }}
           aria-hidden="true"
         />
@@ -96,7 +102,7 @@ export default function HowItWorks() {
 
         <FadeIn delay={4} className="mt-10 text-center">
           <p
-            className="inline-block text-text-muted text-sm px-4 py-2 rounded-full border border-border"
+            className="inline-block text-text-muted text-sm px-4 py-2 rounded-full border border-gold/30 text-gold"
             style={{
               fontFamily: 'var(--font-mono)',
             }}

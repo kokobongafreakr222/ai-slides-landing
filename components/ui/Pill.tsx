@@ -5,8 +5,8 @@ interface PillProps {
 
 const variantStyles: Record<NonNullable<PillProps['variant']>, string> = {
   default: 'bg-bg-card text-text-muted border border-border',
-  accent: 'bg-accent-muted text-accent',
-  muted: 'bg-primary-muted text-primary',
+  accent: 'bg-gold-muted text-gold border border-gold/20',
+  muted: 'bg-gold-subtle text-gold-dark border border-gold/10',
 };
 
 export default function Pill({ label, variant = 'default' }: PillProps) {

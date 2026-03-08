@@ -11,12 +11,12 @@ interface CaseCardProps {
 
 function CaseMockup({ tag }: { tag: string }) {
   const colors: Record<string, string> = {
-    'Консультант': '#5b6af0',
-    'Менеджер': '#3ecf8e',
-    'Эксперт': '#f5a623',
-    'Агентство': '#7c8cf8',
+    'Консультант': '#d4af37',
+    'Менеджер': '#b8941f',
+    'Эксперт': '#e5c158',
+    'Агентство': '#c9a227',
   };
-  const color = colors[tag] || '#5b6af0';
+  const color = colors[tag] || '#d4af37';
 
   return (
     <div
@@ -62,7 +62,7 @@ function CaseCard({ tag, title, description, index }: CaseCardProps) {
   return (
     <FadeIn delay={index}>
       <article
-        className="flex flex-col gap-4 p-6 rounded-lg h-full transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] bg-bg-card"
+        className="flex flex-col gap-4 p-6 rounded-lg h-full card-hover bg-bg-card"
         style={{
           border: '1px solid var(--color-border)',
         }}
@@ -70,10 +70,10 @@ function CaseCard({ tag, title, description, index }: CaseCardProps) {
         <CaseMockup tag={tag} />
         <div className="flex flex-col gap-3">
           <Pill label={tag} variant="accent" />
-          <h3 className="text-text font-semibold text-xl leading-snug">
+          <h3 className="text-text font-semibold text-xl leading-snug" style={{ fontFamily: 'var(--font-heading)' }}>
             {title}
           </h3>
-          <p className="text-text-muted text-base leading-relaxed">
+          <p className="text-text-muted text-base leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
             {description}
           </p>
         </div>

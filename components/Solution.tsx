@@ -42,7 +42,8 @@ export default function Solution() {
 
             <div className="mt-8">
               <p
-                className="text-xs uppercase font-medium mb-3 text-text-subtle tracking-wider"
+                className="text-xs uppercase font-medium mb-3 text-text-subtle tracking-[0.15em]"
+                style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Доступные стили
               </p>
@@ -65,8 +66,8 @@ export default function Solution() {
                   borderBottom: '1px solid var(--color-border)',
                 }}
               >
-                <span>Инструмент</span>
-                <span>Что происходит</span>
+                <span style={{ fontFamily: 'var(--font-heading)' }}>Инструмент</span>
+                <span style={{ fontFamily: 'var(--font-heading)' }}>Что происходит</span>
               </div>
 
               {comparisonData.map((row, i) => (
@@ -74,17 +75,17 @@ export default function Solution() {
                   key={row.tool}
                   className="grid grid-cols-[1fr_2fr] items-start gap-4 px-4 py-4"
                   style={{
-                    backgroundColor: row.isUs ? 'var(--color-primary-muted)' : 'var(--color-bg-card)',
+                    backgroundColor: row.isUs ? 'var(--color-gold-muted)' : 'var(--color-bg-card)',
                     borderBottom: i < comparisonData.length - 1 ? '1px solid var(--color-border)' : undefined,
                   }}
                 >
                   <div className="flex items-center gap-2">
-                    <span className={row.isUs ? 'text-success' : 'text-text-subtle'}>
+                    <span className={row.isUs ? 'text-gold' : 'text-text-subtle'}>
                       {row.isUs ? <IconCheck size={14} /> : <IconX size={14} />}
                     </span>
                     <span
                       className="font-semibold text-sm"
-                      style={{ color: row.isUs ? 'var(--color-text)' : 'var(--color-text-muted)' }}
+                      style={{ color: row.isUs ? 'var(--color-text)' : 'var(--color-text-muted)', fontFamily: 'var(--font-heading)' }}
                     >
                       {row.tool}
                     </span>
@@ -93,6 +94,7 @@ export default function Solution() {
                     className="text-sm leading-relaxed"
                     style={{
                       color: row.isUs ? 'var(--color-text)' : 'var(--color-text-muted)',
+                      fontFamily: 'var(--font-body)',
                     }}
                   >
                     {row.description}

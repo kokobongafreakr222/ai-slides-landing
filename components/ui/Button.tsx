@@ -14,13 +14,13 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonProps['variant'], string> = {
   primary:
-    'bg-primary text-white hover:bg-primary-hover',
+    'bg-gold text-bg hover:bg-gold-light shadow-gold',
   secondary:
-    'bg-bg-card text-text hover:bg-bg-alt',
+    'bg-bg-card text-text hover:bg-bg-elevated border border-border hover:border-gold/30',
   ghost:
-    'bg-transparent text-text-muted hover:text-text',
+    'bg-transparent text-text-muted hover:text-gold',
   outline:
-    'bg-transparent border border-border text-text hover:border-primary',
+    'bg-transparent border border-border text-text hover:border-gold hover:text-gold',
 };
 
 const sizeStyles: Record<ButtonProps['size'], string> = {
@@ -41,7 +41,7 @@ export default function Button({
   className = '',
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center rounded-md font-semibold transition-all duration-300 ease-out cursor-pointer select-none focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 min-h-[44px] active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-glow';
+    'inline-flex items-center justify-center rounded-sm font-medium transition-all duration-400 ease-out cursor-pointer select-none focus-visible:outline-1 focus-visible:outline-gold focus-visible:outline-offset-2 min-h-[44px] active:scale-[0.98] hover:-translate-y-0.5 btn-gold-shine';
 
   const combinedStyles = [
     baseStyles,
@@ -63,12 +63,12 @@ export default function Button({
       {children}
       {variant === 'primary' && !loading && (
         <svg 
-          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
+          className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" 
           fill="none" 
           viewBox="0 0 24 24" 
           stroke="currentColor"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>
       )}
     </span>

@@ -19,15 +19,15 @@ export default function SectionHeader({
   return (
     <div className={alignStyles}>
       {eyebrow && (
-        <p className="text-accent uppercase tracking-wider text-xs font-medium mb-3">
+        <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
           {eyebrow}
         </p>
       )}
-      <h2 className="text-text font-bold text-3xl leading-snug tracking-tight mb-4">
+      <h2 className="text-text font-semibold text-3xl leading-snug tracking-[0.02em] mb-5" style={{ fontFamily: 'var(--font-heading)' }}>
         {title}
       </h2>
       {subtitle && (
-        <p className="text-text-muted text-md leading-relaxed">
+        <p className="text-text-muted text-lg leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
           {subtitle}
         </p>
       )}

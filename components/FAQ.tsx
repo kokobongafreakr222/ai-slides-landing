@@ -33,11 +33,11 @@ function AccordionItem({ question, answer, isOpen, onToggle, index }: AccordionI
           minHeight: '44px',
         }}
       >
-        <span className="font-medium text-md leading-snug">
+        <span className="font-medium text-md leading-snug" style={{ fontFamily: 'var(--font-heading)' }}>
           {question}
         </span>
         <span
-          className="flex-shrink-0 transition-transform duration-200 text-accent"
+          className="flex-shrink-0 transition-transform duration-200 text-gold"
           aria-hidden="true"
         >
           {isOpen ? <IconMinus size={20} /> : <IconPlus size={20} />}
@@ -56,6 +56,7 @@ function AccordionItem({ question, answer, isOpen, onToggle, index }: AccordionI
       >
         <p
           className="text-base text-text-muted leading-relaxed pb-5"
+          style={{ fontFamily: 'var(--font-body)' }}
         >
           {answer}
         </p>

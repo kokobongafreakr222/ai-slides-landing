@@ -1,11 +1,19 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Cinzel, Cormorant_Garamond, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter',
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  variable: '--font-cinzel',
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-cormorant',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -27,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="ru" className={`${cinzel.variable} ${cormorant.variable} ${jetbrainsMono.variable}`}>
       <body>
         <a href="#main-content" className="skip-to-content">
           Перейти к содержимому
